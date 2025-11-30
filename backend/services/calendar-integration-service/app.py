@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 def get_config():
-    """Reads the shared campaign.yml file."""
+    """Reads the environment variables."""
     try:
         with open('.env', 'r') as f:
             return yaml.safe_load(f)

@@ -4,39 +4,3 @@ campaign:
   backgroundImage: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=2574&auto=format&fit=crop"
   # This static date will be used as a fallback
   nextSession: "TBD"
-
-heroes:
-  - name: "Tharivol"
-    class: "Elf Guardian"
-    image: "https://images.unsplash.com/photo-1636254060867-a006c0953258?q=80&w=2670&auto=format&fit=crop"
-    tags: ["Stalwart", "Noble"]
-    description: "Protector of the small folk and wielder of the Sun shield."
-    icon: "shield"
-    color: "amber"
-
-  - name: "Lyra"
-    class: "Human Sorcerer"
-    image: "https://images.unsplash.com/photo-1598556776374-2c246f047372?q=80&w=2670&auto=format&fit=crop"
-    tags: ["Wild Magic", "Scholar"]
-    description: "Seeker of forbidden texts, constantly battling the chaos within."
-    icon: "sparkles"
-    color: "purple"
-
-  - name: "Kaelen"
-    class: "Faun Ranger"
-    image: "https://images.unsplash.com/photo-1620216439007-8854f923b7a1?q=80&w=2670&auto=format&fit=crop"
-    tags: ["Tracker", "Outlander"]
-    description: "Quiet walker of the Verdant woods, accompanied by his hawk."
-    icon: "feather"
-    color: "emerald"
-
-sessions:
-  - title: "Session 3: The Broken Bridge"
-    date: "Nov 28, 2025"
-    summary: "The party successfully navigated the Whispering Chasm, though Lyra nearly fell to the shadows. They discovered the ancient rune necessary to unlock the gate."
-    color: "amber"
-
-  - title: "Session 2: Tavern Trouble"
-    date: "Nov 14, 2025"
-    summary: "A bar fight broke out at the Gilded Tankard. Tharivol attempted diplomacy, but dice were rolled with Fear."
-    color: "purple"
