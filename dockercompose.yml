@@ -5,10 +5,6 @@ services:
     build: ./frontend
     ports:
       - "8080:80"
-    volumes:
-      # Mount current directory to nginx root for live editing/debugging
-      - ./frontend/html:/usr/share/nginx/html
-      - ./frontend/data/campaign.yml:/usr/share/nginx/data/campaign.yml
   calendar-integration-service:
     build: ./backend/services/calendar-integration-service
     ports:

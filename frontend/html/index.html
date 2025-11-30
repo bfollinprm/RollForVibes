@@ -130,7 +130,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('../data/campaign.yml')
+            fetch('/data/campaign.yml')
                 .then(response => response.text())
                 .then(text => {
                     const data = jsyaml.load(text);
