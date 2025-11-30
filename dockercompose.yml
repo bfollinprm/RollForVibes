@@ -12,3 +12,33 @@ services:
     # Loads environment variables (API Key & Calendar ID) from the file
     env_file:
       - ./backend/services/calendar-integration-service/.env
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: rollforvibes
+      POSTGRES_USER: rfv_user
+      POSTGRES_PASSWORD: rfv_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  session-attribute-service:
+    build: ./backend/services/session-attribute-service
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://rfv_user:rfv_pass@postgres:5432/rollforvibes
+    depends_on:
+      - postgres
+  recording-service:
+    build: ./backend/services/recording-service
+    ports:
+      - "9000:9000"
+    environment:
+      DATABASE_URL: postgresql://rfv_user:rfv_pass@postgres:5432/rollforvibes
+      GOOGLE_SERVICE_ACCOUNT_FILE=/run/secrets/google-service-account.json
+    depends_on:
+      - postgres
+
+volumes:
+  postgres-data:
