@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  portal:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    volumes:
+      # Mount current directory to nginx root for live editing/debugging
+      - ./frontend/html:/usr/share/nginx/html
+      - ./data/campaign.yml:/usr/share/nginx/html/data/campaign.yml
