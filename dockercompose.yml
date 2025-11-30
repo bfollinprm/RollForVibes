@@ -8,4 +8,11 @@ services:
     volumes:
       # Mount current directory to nginx root for live editing/debugging
       - ./frontend/html:/usr/share/nginx/html
-      - ./data/campaign.yml:/usr/share/nginx/html/data/campaign.yml
+      - ./frontend/data/campaign.yml:/usr/share/nginx/data/campaign.yml
+  calendar-integration-service:
+    build: ./backend/services/calendar-integration-service
+    ports:
+      - "5000:5000"
+    # Loads environment variables (API Key & Calendar ID) from the file
+    env_file:
+      - ./backend/services/calendar-integration-service/.env
